@@ -1,0 +1,32 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    cliente
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h1>cliente</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+    {% for c in clientes  %}
+            <tr>
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.DNI }}</td>
+                <td>{{ c.email }}</td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock contenido %}
+    

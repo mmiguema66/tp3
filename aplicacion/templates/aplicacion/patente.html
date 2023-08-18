@@ -1,0 +1,31 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    patente
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>patente</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>patente</th>
+            <th>numero_motor</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+{% for c in patentes  %}
+        <tr>
+            <td>{{ c.patente }}</td>
+            <td>{{ c.numero_motor }}</td>
+            
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    

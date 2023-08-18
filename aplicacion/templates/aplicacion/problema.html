@@ -1,0 +1,33 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    problema
+{% endblock titulo %}
+
+
+{% block contenido %}
+<h1>problema</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>reparar</th>
+            <th>ingreso</th>
+            <th>entregado</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+{% for c in problemas  %}
+        <tr>
+            <td>{{ c.reparar }}</td>
+            <td>{{ c.ingreso }}</td>
+            <td>{{ c.entregado }}</td>
+            
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+    
